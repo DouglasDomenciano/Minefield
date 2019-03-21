@@ -5,7 +5,7 @@ import Field from './Field'
 export default props => {
     const rows = props.board.map((row, indexRow) => {
         const columns = row.map((field, indexColumn) => {
-            return <Field {...field} key={indexColumn}  onOpen={() => props.onOpenField(indexRow, indexColumn)}/>
+            return <Field {...field} key={indexColumn}  onOpen={() => props.onOpenField(indexRow, indexColumn)} onSelect={e => props.onSelectField(r,c)}/>
         })
         return <View key={indexRow} style={{flexDirection: 'row'}}>{columns}</View>
     })
