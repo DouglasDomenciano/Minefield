@@ -5,8 +5,8 @@ import Flag from './Flag'
 export default props => {
 
     return (
-        <View style={StyleSheet.container}>
-            <View styles={styles.flagContainer}>
+        <View style={styles.container}>
+            <View style={styles.flagContainer}>
                 <TouchableOpacity onPress={props.onFlagPress} style={styles.flagButton}>
                     <Flag bigger />
                 </TouchableOpacity>
